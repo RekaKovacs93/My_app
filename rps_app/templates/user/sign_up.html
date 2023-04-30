@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<form action="/user/sign_up" method = "post">
+    <label for = "username" id = "username">Choose a user name</label>
+    <input type="text" name = "username" id="username">
+    <button type="submit">Play game</button>
+</form>
+
+{% endblock %}

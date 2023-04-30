@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Let's go {{ user.name }}</h1>
+
+<form action="/user/opponent" method = "post">
+    <label for = "username" id = "username">Select your opponent</label>
+    <select id="username" name="username">
+  {% for user in users %}
+<option value="{{ user.id }}">{{ user.name }}</option>
+{% endfor %}
+        {# <option value="computer">computer</option> #}
+      </select>
+    <button type="submit">Play game</button>
+</form>
+{# 
+<button><a href="/game/Play">Play</a></button> #}
+
+
+
+
+{% endblock %}
