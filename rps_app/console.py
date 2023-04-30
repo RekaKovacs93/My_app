@@ -6,6 +6,8 @@ import repositories.user_repo as user_repo
 
 
 
-user1 = User('Samwise Gamgee', 0, 0)
-print(user1.__dict__)
+user1 = User('Samwise Gamgee', 0, 0, 0)
 user_repo.save(user1)
+
+user1.losses = 4
+user_repo.update(user1)

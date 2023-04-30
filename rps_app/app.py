@@ -3,6 +3,7 @@ from flask import Flask, render_template
 from controllers.controller import rps_blueprint
 
 app = Flask(__name__)
+app.secret_key = "Icandothis!"
 
 app.register_blueprint(rps_blueprint)
 

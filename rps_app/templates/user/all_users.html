@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<nav>
+    <ul>
+      <li>
+        <a href="/home">Home</a>
+      </li>
+      <li>
+        <a href="/game/play">Play</a>
+      </li>
+      <li>
+        <a href="/user/all_users">Leaderboard</a>
+      </li>
+    </ul>
+  </nav>
+  <h1>Leaderboard</h1>
+
+  <table>
+    <tr>
+      <th><a href="/user/all_users/name">Name</a></th>
+      <th><a href="/user/all_users/wins">Wins</a></th>
+      <th><a href="/user/all_users/losses">Losses</a></th>
+      <th><a href="/user/all_users/ties">Ties</a></th>
+    </tr>
+    {% for user in users %}
+    <tr>
+      <td> {{user.name}} </td>
+      <td> {{user.wins}} </td>
+      <td> {{user.losses}} </td>
+      <td> {{user.ties}} </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+
+
+{% endblock %}

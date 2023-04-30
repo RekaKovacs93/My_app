@@ -2,6 +2,19 @@
 
 
 {% block content %}
+<nav>
+    <ul>
+      <li>
+        <a href="/home">Home</a>
+      </li>
+      <li>
+        <a href="/game/play">Play</a>
+      </li>
+      <li>
+        <a href="/user/all_users">Leaderboards</a>
+      </li>
+    </ul>
+  </nav>
 <h1>Hello</h1>
 <form action="/game/play" method="post">
 {% for key in logic.keys() %}
@@ -12,9 +25,9 @@
 {% if player == computer %}
     <h1>It's a tie</h1>
 {% elif logic[player] == computer %}
-    <h1>Computer wins</h1>
+    <h1>{{computer}} beats {{player}}! Computer wins</h1>
 {% else %}
-    <h1>Player wins</h1>
+    <h1>{{player}} beats {{computer}}! Player wins</h1>
 {% endif %}
 
 {% endblock %}
