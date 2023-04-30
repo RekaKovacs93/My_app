@@ -1,2 +1,20 @@
 {% extends 'base.html'%}
 
+
+{% block content %}
+<h1>Hello</h1>
+<form action="/game/play" method="post">
+{% for key in logic.keys() %}
+    <button type="submit" value="{{key}}" name="play"><img src="/static/images/{{key}}.svg"></button>
+{% endfor %}
+</form>
+
+{% if player == computer %}
+    <h1>It's a tie</h1>
+{% elif logic[player] == computer %}
+    <h1>Computer wins</h1>
+{% else %}
+    <h1>Player wins</h1>
+{% endif %}
+
+{% endblock %}

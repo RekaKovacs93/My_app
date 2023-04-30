@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.user import User
 from repositories import user_repo
+from random import randint
 
 rps_blueprint = Blueprint("rps", __name__)
 
@@ -48,6 +49,32 @@ def show_opponents():
 
 
 
-# @rps_blueprint.route("/play")
-# def locations():
-#     return render_template("play.html")
+@rps_blueprint.route('/game/play')
+def play():
+    logic = {
+        "Rock": "Paper",
+        "Paper": "Scissors",
+        "Scissors": "Rock"
+    }
+    return render_template('game/play.html', logic=logic)
+
+
+@rps_blueprint.route('/game/play', methods=["POST"])
+def play_game():
+    logic = {
+        "Rock": "Paper",
+        "Paper": "Scissors",
+        "Scissors": "Rock"
+}
+    def converter(num):
+        if num == 1:
+            return "Rock"
+        if num == 2:
+            return "Paper"
+        if num == 3:
+            return "Scissors"
+    player = request.form["play"]
+    computer = converter(randint(1,3))
+    
+    return render_template('game/play.html', logic = logic, player = player, computer = computer)
+

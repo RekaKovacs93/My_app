@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg392"
+   width="360.80237"
+   height="547.54486"
+   viewBox="0 0 360.80238 547.54486"
+   sodipodi:docname="rock_paper_scissors-02.eps"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs396" />
+  <sodipodi:namedview
+     id="namedview394"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     id="g400"
+     inkscape:groupmode="layer"
+     inkscape:label="Page 1"
+     transform="matrix(1.3333333,0,0,-1.3333333,-707.47813,2042.8604)">
+    <g
+       id="g402"
+       transform="scale(0.1)">
+      <path
+         d="m 7996.6052,13619.774 v -1051.92 c 0,-738.672 -598.8,-1337.489 -1337.5,-1337.489 v 0 c -738.7,0 -1337.52,598.817 -1337.52,1337.489 v 366.43 140.48 71.25 237.17 509.95 308.42 c 0,139.42 113.02,252.44 252.42,252.44 v 0 c 139.4,0 252.5,-113.02 252.5,-252.44 v -308.42 -509.95 -177.9 l 27.4,3.23 v 403.69 280.93 100.77 436.68 381.7 c 0,139.42 113.1,252.44 252.5,252.44 139.4,0 252.4,-113.02 252.4,-252.44 v -381.7 -436.68 -100.77 -280.93 -344.42 l 31.6,3.7 v 380.42 241.23 342.01 235.14 583.24 c 0,139.42 113,252.43 252.4,252.43 v 0 c 139.4,0 252.4,-113.01 252.4,-252.43 v -583.24 -134.8 -442.35 -140.9 -421.49 l 27.5,3.23 v 239.17 319.99 208.29 148.99 528.28 c 0,139.42 113,252.44 252.4,252.44 139.5,0 252.5,-113.02 252.5,-252.44 v -528.28 -39.7 -317.58 -210.7 -357.28 -649.23 c -102.2,0.9 -424.9,-9.89 -598.7,-174.95 -74.5,-70.78 -112.3,-160.94 -112.3,-268 h 59.8 c 0,89.97 31.5,165.51 93.6,224.52 185.3,176.05 582,158.02 586,157.83 l 31.4,-1.6 0.2,413.64 v 592.41 c 0,140.54 114,254.47 254.5,254.47 140.5,0 254.5,-113.93 254.5,-254.47"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#030303;stroke-width:30.9975;stroke-dasharray:none;stroke-opacity:0.733333;paint-order:stroke fill markers"
+         id="path408-7" />
+    </g>
+  </g>
+</svg>
