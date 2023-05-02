@@ -73,5 +73,6 @@ def select_all_ties():
 def update(user):
     sql = "UPDATE users SET (name, wins, losses, ties) = (%s, %s, %s, %s) WHERE id = %s"
     values = [user.name, user.wins, user.losses, user.ties, user.id]
-    print(f"query: {sql}, values: {values}")
     run_sql(sql, values)
+
+# def update_scores

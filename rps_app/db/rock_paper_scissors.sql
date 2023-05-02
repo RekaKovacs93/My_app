@@ -1,5 +1,5 @@
 DROP TABLE games;
-DROP TABLE users;
+-- DROP TABLE users;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -12,7 +12,8 @@ CREATE TABLE users (
 CREATE TABLE games (
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL REFERENCES users(id),
-  name VARCHAR(255)
+  opponent VARCHAR(255),
+  winner VARCHAR(255)
 );
 
 -- CREATE TABLE visits (

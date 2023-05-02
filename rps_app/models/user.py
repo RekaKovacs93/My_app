@@ -5,3 +5,5 @@ class User:
         self.losses = losses
         self.ties = ties
         self.id = id
+
+    # def add_win
