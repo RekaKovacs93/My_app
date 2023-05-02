@@ -1,4 +1,124 @@
 img{
+    width: 80px;
+    height: 80px
+}
+
+body{
+    background-color: black;
+    font-family: "Orbitron";
+    color: aliceblue;
+}
+
+h1 {
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 70px
+}
+
+.middle{
+    margin-top: 300px
+}
+button:not(.game) {
+    color: aliceblue;
+    background-color: black;
+    border: 1px solid aliceblue;
+    width: 70px;
+    height: 50px;
+    margin: 20px;
+    font-family: "Orbitron";
+}
+.user_butt, form{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "Orbitron";
+}
+
+input{
+    height: 20px;
+}
+select{
+    height: 30px;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+li{
+    font-size: larger;
+}
+.play{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.game{
+    background-color: transparent;
+    box-shadow: none;
+    border: none
+}
+img:hover:not(.choice){
+    width: 120px;
+    height: 120px
+}
+.arena{
+    height: 300px;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid aliceblue;
+    margin: 50px 0px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.choice{
     width: 200px;
     height: 200px
 }
+
+table, tr{
+    width: 100%;
+    border: 0.5px solid aliceblue;
+    padding: 10px;
+    border-collapse: collapse;
+
+}
+th{
+    padding: 10px;
+    text-align: left;
+    font-size: larger;
+    border: 0.5px solid aliceblue;
+}
+
+td{
+    border: 0.5px solid aliceblue;
+    padding: 10px;
+    text-align: left;
+    font-size:smaller;
+}
+
+a:hover, button:hover{
+    color:rgb(28, 255, 11);
+}
+/* 
+@keyframes player_side {
+    20% {margin-bottom: 0px;}
+    30% {margin-bottom: -728px;}
+    50% {margin-bottom: -728px;}
+    60% {margin-bottom: -1456px;}
+    70% {margin-bottom: -1456px;}
+    80% {margin-bottom: -2184px;}
+    90% {margin-bottom: -2184px;}
+  }
+
+.player_side, .computer_side {
+    width: 2912px;
+    animation: player_side 3s steps(3, end) infinite;
+  } */
