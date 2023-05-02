@@ -6,12 +6,15 @@ from repositories import user_repo
 from repositories import game_repo
 from random import randint
 
-rps_blueprint = Blueprint("rps", __name__)
+game_blueprint = Blueprint("game", __name__)
 
 
+@game_blueprint.route('/home')
+def home():
+    return render_template('index.html')
 
 
-@rps_blueprint.route('/game/play')
+@game_blueprint.route('/game/show_game')
 def play():
     logic = {
         "Rock": "Paper",
@@ -19,14 +22,14 @@ def play():
         "Scissors": "Rock"
     }
     user = user_repo.select(session["user_id"])
-    return render_template('game/play.html', logic=logic)
+    return render_template('game/show_game.html', logic=logic)
 
 
-@rps_blueprint.route('/game/play', methods=["POST"])
+@game_blueprint.route('/game/play', methods=["POST"])
 def play_game():
     user = user_repo.select(session["user_id"])
     winner = ""
-    game = Game(user, "Computer Player", winner)
+    game = Game(user, "Computer", winner)
     game_repo.save(game)
     logic = {
         "Rock": "Paper",
@@ -65,22 +68,29 @@ def play_game():
 
     
     return render_template('game/play.html', logic = logic, player = player, computer = computer, user = user, game = game)
-    
 
-# /users
-
-
-
-
-
-# @rps_blueprint.route('/user/<id>')
-# def show_user(id):
-#     user = user_repo.select(id)
-#     return render_template('user/show.html', user = user)
+@game_blueprint.route('/user/all_users')
+def show_all_users():
+    users = user_repo.select_all()
+    games = game_repo.select_all()
+    return render_template('user/all_users.html', users = users, games = games)
 
 
-# @rps_blueprint.route('/user/opponent', methods=["POST"])
-# def show_opponents():
-#     users = user_repo.select_all()
-#     return render_template('user/show.html', users = users)
+# /users?sortBy=name
+@game_blueprint.route('/user/all_users/user')
+def show_all_users_by_name():
+    users = user_repo.select_all()
+    games = game_repo.select_all_user()
+    return render_template('user/all_users.html', users = users, games = games)
 
+@game_blueprint.route('/user/all_users/opponent')
+def show_all_users_by_wins():
+    users = user_repo.select_all()
+    games = game_repo.select_all_opponent()
+    return render_template('user/all_users.html', users = users, games = games)
+
+@game_blueprint.route('/user/all_users/winner')
+def show_all_users_by_losses():
+    games = game_repo.select_all_winner()
+    users = user_repo.select_all()
+    return render_template('user/all_users.html', users = users, games = games)

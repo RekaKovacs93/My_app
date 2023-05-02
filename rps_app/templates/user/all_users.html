@@ -7,29 +7,15 @@
         <a href="/home">Home</a>
       </li>
       <li>
-        <a href="/game/play">Play</a>
+        <a href="/game/show_game">Play</a>
       </li>
       <li>
         <a href="/user/all_users">Leaderboard</a>
       </li>
     </ul>
   </nav>
-  <h1>Most recent games</h1>
+  <hr>
 
-  <table>
-    <tr>
-      <th><a href="/user/all_users/user">Player</a></th>
-      <th><a href="/user/all_users/opponent">Opponent</a></th>
-      <th><a href="/user/all_users/winner">Winner</a></th>
-    </tr>
-    {% for game in games %}
-    <tr>
-      <td> {{game.user.name}} </td>
-      <td> {{game.opponent}} </td>
-      <td> {{game.winner}} </td>
-    </tr>
-    {% endfor %}
-  </table>
   <h1>Leaderboard</h1>
 
   <table>
@@ -45,6 +31,22 @@
       <td> {{user.wins}} </td>
       <td> {{user.losses}} </td>
       <td> {{user.ties}} </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <h1>Most recent games</h1>
+
+  <table>
+    <tr>
+      <th><a href="/user/all_users/user">Player</a></th>
+      <th><a href="/user/all_users/opponent">Opponent</a></th>
+      <th><a href="/user/all_users/winner">Winner</a></th>
+    </tr>
+    {% for game in games %}
+    <tr>
+      <td> {{game.user.name}} </td>
+      <td> {{game.opponent}} </td>
+      <td> {{game.winner}} </td>
     </tr>
     {% endfor %}
   </table>

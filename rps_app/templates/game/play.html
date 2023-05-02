@@ -8,7 +8,7 @@
         <a href="/home">Home</a>
       </li>
       <li>
-        <a href="/game/play">Play</a>
+        <a href="/game/show_game">Play</a>
       </li>
       <li>
         <a href="/user/all_users">Leaderboards</a>
@@ -17,33 +17,26 @@
   </nav>
   <hr>
   <h1 class="play">You VS Computer</h1>
+  {% if player == computer %}
+  <h1 class="result">It's a tie</h1>
+{% elif logic[player] == computer %}
+   <h3 class="play">{{computer}} beats {{player}}</h3><h1 class="result">Computer wins!</h1>
+{% else %}
+  <h3 class="play">{{player}} beats {{computer}}</h3><h1 class="result">You win!</h1>
+{% endif %}
   <div class ='arena'>
     <div class="player_side">
-    <!-- <div class="player"><img class="choice" src="/static/images/rock.svg"></div>
-    <div class="computer"><img class="choice" src="/static/images/paper.svg"></div>
-    <div class="player"><img class="choice" src="/static/images/scissors.svg"></div> -->
+    <div class="player"><img class="delay" src="/static/images/play1.svg"></div>
     <div class="player"><img class="choice" src="/static/images/{{ player }}.svg"></div>
     </div>
     <div class="computer_side">
-    <!-- <div class="player"><img class="choice" src="/static/images/rock.svg"></div>
-    <div class="computer"><img class="choice" src="/static/images/paper.svg"></div>
-    <div class="player"><img class="choice" src="/static/images/scissors.svg"></div> -->
-    <div class="computer"><img class="choice" src="/static/images/{{ computer }}.svg"></div>
+      <div><img class="delay" src="/static/images/play.svg"></div>
+    <div><img class="choice" src="/static/images/{{ computer }}.svg"></div>
   </div>
   </div>
+<div class="box"><button id="again" type="submit" name="play"><a href="show_game">Try again</a></button>
+</div>
+    
 
-<form action="/game/play" method="post">
-{% for key in logic.keys() %}
-    <button class = "game" type="submit" value="{{key}}" name="play"><img src="/static/images/{{key}}.svg"></button>
-{% endfor %}
-</form>
-
-{% if player == computer %}
-  <h1>It's a tie</h1>
-{% elif logic[player] == computer %}
-   <h3 class="play">{{computer}} beats {{player}}</h3><h1 class="play">Computer wins!</h1>
-{% else %}
-  <h3 class="play">{{player}} beats {{computer}}</h3><h1 class="play">You win!</h1>
-{% endif %}
 
 {% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+<nav>
+    <ul>
+      <li>
+        <a href="/home">Home</a>
+      </li>
+      <li>
+        <a href="/game/play">Play</a>
+      </li>
+      <li>
+        <a href="/user/all_users">Leaderboards</a>
+      </li>
+    </ul>
+  </nav>
+  <hr>
+  
+  <div class ='arena'>
+    <h1 class="play">Choose your weapon</h1>
+ 
+  </div>
+
+<form action="/game/play" method="post">
+{% for key in logic.keys() %}
+    <button class = "game" type="submit" value="{{key}}" name="play"><img class="buttons" src="/static/images/{{key}}.svg"></button>
+{% endfor %}
+</form>
+{% endblock %}

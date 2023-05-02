@@ -37,7 +37,7 @@ def select_all():
 def select_all_user():
     games = []
 
-    sql = "SELECT * FROM users ORDER BY user ASC"
+    sql = "SELECT * FROM games ORDER BY user ASC"
     results = run_sql(sql)
     for row in results:
         user = user_repo.select(row['user_id'])
@@ -48,7 +48,7 @@ def select_all_user():
 def select_all_opponent():
     games = []
 
-    sql = "SELECT * FROM users ORDER BY opponent ASC"
+    sql = "SELECT * FROM games ORDER BY opponent ASC"
     results = run_sql(sql)
     for row in results:
         user = user_repo.select(row['user_id'])
@@ -59,7 +59,7 @@ def select_all_opponent():
 def select_all_winner():
     games = []
 
-    sql = "SELECT * FROM users ORDER BY winner ASC"
+    sql = "SELECT * FROM games ORDER BY winner ASC"
     results = run_sql(sql)
     for row in results:
         user = user_repo.select(row['user_id'])

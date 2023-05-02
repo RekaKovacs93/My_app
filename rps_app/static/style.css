@@ -12,7 +12,8 @@ body{
 h1 {
     font-size: xx-large;
     text-align: center;
-    margin-top: 70px
+    margin: 70px 0px;
+    
 }
 
 .middle{
@@ -53,17 +54,20 @@ ul{
 li{
     font-size: larger;
 }
-.play{
-    margin-top: 50px;
+.play:not(h1){
     text-align: center;
+    visibility: hidden;
+    animation-delay: 5s;
+    animation: Display 3s forwards;
 }
+
 
 .game{
     background-color: transparent;
     box-shadow: none;
     border: none
 }
-img:hover:not(.choice){
+.buttons:hover{
     width: 120px;
     height: 120px
 }
@@ -76,9 +80,10 @@ img:hover:not(.choice){
     margin: 50px 0px;
     align-items: center;
     overflow: hidden;
+    
 }
 
-.choice{
+.choice, .delay{
     width: 200px;
     height: 200px
 }
@@ -107,18 +112,73 @@ td{
 a:hover, button:hover{
     color:rgb(28, 255, 11);
 }
-/* 
-@keyframes player_side {
-    20% {margin-bottom: 0px;}
-    30% {margin-bottom: -728px;}
-    50% {margin-bottom: -728px;}
-    60% {margin-bottom: -1456px;}
-    70% {margin-bottom: -1456px;}
-    80% {margin-bottom: -2184px;}
-    90% {margin-bottom: -2184px;}
-  }
+.player_side, .computer_side{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
-.player_side, .computer_side {
-    width: 2912px;
-    animation: player_side 3s steps(3, end) infinite;
-  } */
+.choice {
+    visibility: hidden;
+    animation-delay: 5s;
+    animation: Display 3s forwards;
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+}
+
+.delay{
+    animation: MoveUpDown 1s ease 3;
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+    left: 13rem;
+    transform: translate(-50%, -50%)
+}
+      
+@keyframes MoveUpDown {
+    0% {
+        transform: translateY(0);
+        visibility: visible;
+        }
+    50% {
+        transform: translateY(-50px);
+        visibility: visible;
+        }
+    100% {
+        transform: translateY(0);
+        visibility: hidden;
+            }
+}
+@keyframes Display {
+    0%{
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+        }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        }
+}
+
+.result{
+    visibility: hidden;
+    animation-delay: 5s;
+    animation: Display 3s forwards;
+    color: rgb(28, 255, 11);
+    margin: 20px 0;
+}
+#again{
+    width: 100px;
+    margin: 0;
+}

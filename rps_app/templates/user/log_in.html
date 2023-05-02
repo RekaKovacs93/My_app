@@ -2,13 +2,13 @@
 
 {% block content %}
 <form action="/user/" method = "post">
-    <label for = "username" id = "username">Select your user name</label>
+    <label for = "username" id = "username"><h1 class="middle">Select your user name</h1></label>
     <select id="username" name="username">
         {% for user in users %}
         <option value="{{ user.id }}">{{ user.name }}</option>
         {% endfor %}
       </select>
-    <button type="submit">Play game</button>
+    <button type="submit">Play</button>
 </form>
 
 {% endblock %}
