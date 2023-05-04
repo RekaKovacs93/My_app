@@ -1,5 +1,5 @@
 DROP TABLE games;
--- DROP TABLE users;
+DROP TABLE users;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -16,9 +16,3 @@ CREATE TABLE games (
   winner VARCHAR(255)
 );
 
--- CREATE TABLE visits (
---   id SERIAL PRIMARY KEY,
---   user_id INT REFERENCES users(id) ON DELETE CASCADE,
---   location_id INT NOT NULL REFERENCES locations(id) ON DELETE CASCADE,
---   review TEXT
--- );

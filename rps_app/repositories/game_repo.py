@@ -26,7 +26,7 @@ def select(id):
 def select_all():
     games = []
 
-    sql = "SELECT * FROM games"
+    sql = "SELECT * FROM games ORDER BY id DESC"
     results = run_sql(sql)
     for row in results:
         user = user_repo.select(row['user_id'])

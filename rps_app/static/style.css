@@ -17,16 +17,23 @@ h1 {
 }
 
 .middle{
-    margin-top: 300px
+    font-size: xx-large;
+    text-align: center;
+    margin: auto;
+    margin-top: 300px;
 }
 button:not(.game) {
     color: aliceblue;
     background-color: black;
     border: 1px solid aliceblue;
-    width: 70px;
+    width: 100px;
     height: 50px;
     margin: 20px;
     font-family: "Orbitron";
+}
+
+button:not(.game):hover {
+    border: 1px solid rgb(28, 255, 11);;
 }
 .user_butt, form{
     text-align: center;
@@ -71,22 +78,7 @@ li{
     width: 120px;
     height: 120px
 }
-.arena{
-    height: 300px;
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid aliceblue;
-    margin: 50px 0px;
-    align-items: center;
-    overflow: hidden;
-    
-}
 
-.choice, .delay{
-    width: 200px;
-    height: 200px
-}
 
 table, tr{
     width: 100%;
@@ -112,6 +104,24 @@ td{
 a:hover, button:hover{
     color:rgb(28, 255, 11);
 }
+
+.arena{
+    height: 300px;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid aliceblue;
+    margin: 50px 0px;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.choice, .delay{
+    width: 200px;
+    height: 200px
+}
+
 .player_side, .computer_side{
     position: relative;
     width: 100%;
@@ -140,7 +150,7 @@ a:hover, button:hover{
     z-index: 1;
     position: absolute;
     top: 70px;
-    left: 13rem;
+    left: 15rem;
     transform: translate(-50%, -50%)
 }
       
@@ -158,6 +168,8 @@ a:hover, button:hover{
         visibility: hidden;
             }
 }
+
+
 @keyframes Display {
     0%{
         opacity: 0;

@@ -30,3 +30,5 @@ computer = converter(randint(1,3))
 
 print(computer)
 print(who_is_the_winner(player, computer))
+
+
