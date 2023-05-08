@@ -1,4 +1,5 @@
-# Rock_Paper_Scissors
+# Rock Paper Scissors
+Let's settle this like adults
 
 
 # ### SETUP ### #
