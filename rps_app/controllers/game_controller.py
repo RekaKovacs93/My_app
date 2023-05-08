@@ -67,7 +67,8 @@ def play_game():
     game_repo.update(game)
 
     
-    return render_template('game/play.html', logic = logic, player = player, computer = computer, user = user, game = game)
+    return render_template('game/play.html', logic = logic, player = player, computer = computer,
+    user = user, game = game)
 
 @game_blueprint.route('/user/all_users')
 def show_all_users():

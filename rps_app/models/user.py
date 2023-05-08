@@ -1,4 +1,5 @@
 class User:
+    
     def __init__(self, name, wins, losses, ties, id = None):
         self.name = name
         self.wins = wins
@@ -6,4 +7,3 @@ class User:
         self.ties = ties
         self.id = id
 
-    # def add_win
